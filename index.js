@@ -11,6 +11,7 @@ const corsConfig = {
   credentials: true,
 };
 app.use(cors(corsConfig))
+app.options('/api/message', cors())
 app.post('/api/message', async (req, res) => {
   console.log(req.body)
    const data=req.body
