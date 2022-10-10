@@ -12,7 +12,7 @@ const corsConfig = {
 };
 app.use(cors(corsConfig))
 app.options('/api/message', cors())
-app.post('/api/message', async (req, res) => {
+app.post('/api/message',cors(corsConfig), async (req, res) => {
   console.log(req.body)
    const data=req.body
  const contenuFormulaireContact = `
