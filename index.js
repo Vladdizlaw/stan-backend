@@ -48,6 +48,6 @@ app.post('/api/message',cors(corsConfig), async (req, res) => {
  
  return res.status(200).json()
  })
- app.listen(8082,  (req,res) => {
-    console.log("SERVER START AT PORT:", 8082);
+ app.listen(port,  (req,res) => {
+    console.log("SERVER START AT PORT:", port);
   });
