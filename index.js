@@ -3,6 +3,7 @@ const app = express();
 const  bodyParser =require('body-parser');
 const nodemailer = require('nodemailer');
 const cors = require("cors");
+const port = process.env.PORT || 80
 // 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
@@ -12,6 +13,7 @@ const corsConfig = {
 };
 app.use(cors(corsConfig))
 app.options('/api/message', cors())
+
 app.post('/api/message',cors(corsConfig), async (req, res) => {
   console.log(req.body)
    const data=req.body
