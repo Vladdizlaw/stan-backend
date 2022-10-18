@@ -30,7 +30,7 @@ app.post('/api/message',cors(corsConfig), async (req, res) => {
    secure: true,
    auth: {
      user: 'stan-clinic',
-     pass: '2022STAN-clinic'
+     pass: 'Stan2002Clin'
    }
  })
 
@@ -45,7 +45,7 @@ app.post('/api/message',cors(corsConfig), async (req, res) => {
  console.log('Message sent: %s', info.messageId)
  console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info))
 
- res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+ res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
  return res.status(200).json()
  })
