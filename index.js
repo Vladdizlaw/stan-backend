@@ -45,7 +45,8 @@ app.post('/api/message',cors(corsConfig), async (req, res) => {
  console.log('Message sent: %s', info.messageId)
  console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info))
 
- 
+ res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
  return res.status(200).json()
  })
  app.listen(port,  (req,res) => {
